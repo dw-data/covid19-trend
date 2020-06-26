@@ -6,7 +6,7 @@ You can find the resulting article [here]().
 
 ## Data source
 
-This analysis is based on data by the [European Centre for Disease Prevention and Control (ECDC)](https://www.ecdc.europa.eu/en). They provide daily updated case numbers. The data can be downloaded [here](https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide). Details on how the data is gathered and processed by ECDC can be found on [this page](https://www.ecdc.europa.eu/en/covid-19/data-collection)
+This analysis is based on data by the [European Centre for Disease Prevention and Control (ECDC)](https://www.ecdc.europa.eu/en). They provide daily updated case numbers. The data can be downloaded [here](https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide). Details on how the data is gathered and processed by ECDC can be found on [this page](https://www.ecdc.europa.eu/en/covid-19/data-collection).
 
 
 ## Analysis

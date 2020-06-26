@@ -1,0 +1,10 @@
+.DS_Store
+*~
+*.ipynb_checkpoints
+*.swp
+*.bak
+*.egg-info
+*.py[cod]
+*.egg
+*.egg-info
+*.Rhistory
