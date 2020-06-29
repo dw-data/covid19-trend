@@ -32,7 +32,7 @@ Based on the sums for the current week (past seven days) and previous week (seve
 Includes all countries whose case numbers doubled compared to the previous week, as long as the previous week's number is not zero.
 
 **More cases compared to previous week:**
-Includes all countries whose weekly case numbers of the current week increased by more than seven cases compared to the previous week. It also includes countries whose case numbers rose from zero cases in the previous week to less than seven cases in the current week.
+Includes all countries whose weekly case numbers of the current week increased by more than seven cases compared to the previous week. It also includes countries whose case numbers rose from zero cases in the previous week to more than seven cases in the current week.
 
 **Approximately same number of cases in both weeks:**
 Includes all countries that have the same case numbers in both weeks, plus/minus seven cases.
