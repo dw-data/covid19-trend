@@ -2,7 +2,7 @@
 
 Data analysis, visualization, writing: [Gianna-Carina Gruen](https://twitter.com/giannagruen)
 
-You can find the resulting article [here]().
+You can find the resulting article [here](https://www.dw.com/en/coronavirus-trend-the-pandemic-is-far-from-over/a-53954594).
 
 ## Data source
 
