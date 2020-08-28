@@ -11,17 +11,20 @@ This analysis is based on data by the [European Centre for Disease Prevention an
 
 ## Analysis
 
-The Python script (refer to [this jupyter notebook](Trend-Corona.ipynb)) sums up the daily reported case numbers in seven-day-chunks, starting with this week's Friday and tracing back seven days to Saturday of the week before. The sum of daily reported case numbers in this seven day period is referred to as "this current week".
+**Update:** *Starting calendar week 35, we change the anaylsis interval. Instead of 7 day intervals, we will be comparing 14 day intervals. We deemed this change necessary, as we observed a lot of variability in the overall trend picture that was not due to an actual change of the situation but could rather be traced back to irregularities in data reporting. By widening the interval, we hope to to better account for that and have our trend only reflect a change when there's an actual change in the situation.*
 
-The next seven-day-chunk for comparison is created by summing up the daily reported case numbers, starting with last week's Friday and tracing back seven days up until the Saturday. The sum of daily reported case numbers in this seven day period is referred to as "last week".
 
-`|<-Saturday --- *last week* --- Friday->||<-Saturday --- *this current week* --- Friday (now)->|`
+The Python script (refer to [this jupyter notebook](Trend-Corona-this-week-from-cw35.ipynb)) sums up the daily reported case numbers in 14-day-chunks (until calendar week 34: 7 day), starting with this week's Friday and tracing back 14 days to Saturday of the week before. The sum of daily reported case numbers in this 14 day period is referred to as "this current two weeks".
 
-Together, those two seven-day-chunks cover a period of 14 days. According to the available information at this time, 14 days equal the maximum "incubation time" of Covid-19, meaning that someone infected on any day is highly likely to show symptoms within 14 days thereafter.
+The next 14-day-chunk for comparison is created by summing up the daily reported case numbers, starting with Friday two weeks ago and tracing back 14 days up until the Saturday. The sum of daily reported case numbers in this seven day period is referred to as "last week".
 
-The script then compares the sum of daily reported cases in "this week" with that of "last week", assigning a trend class (see methodology below).
+`|<-Saturday four weeks ago --- *last two weeks* --- Friday two weeks ago->||<-Saturday two weeks ago--- *this current weeks* --- Friday (now)->|`
 
-The second script (refer to [this jupyter notebook](Trend-Corona-Past-Weeks.ipynb)) does the same, but rolls back over all past Fridays in this year to calculate the same sums and generate a year-long-trend week by week.
+Together, those two 14-day-chunks cover a period of 28 days. According to the available information at this time, 14 days equal the maximum "incubation time" of Covid-19, meaning that someone infected on any day is highly likely to show symptoms within 14 days thereafter. Additionally, there's a duty for authorities to report new cases within 14 days.
+
+The script then compares the sum of daily reported cases in "this two weeks" with that of "last two weeks", assigning a trend class (see methodology below).
+
+The second script (refer to [this jupyter notebook](Trend-Corona-year-trend-from-cw35.ipynb)) does the same, but rolls back over all past Fridays in this year to calculate the same sums and generate a year-long-trend week by week.
 
 
 ## Methodology
@@ -35,7 +38,7 @@ Includes all countries whose case numbers doubled compared to the last week, as 
 Includes all countries whose numbers of cases in the current week increased by more than seven from to the last week. It also includes countries whose case numbers rose from zero cases in the last week to more than seven cases in the current week.
 
 **Approximately same number of cases in both weeks:**
-Includes all countries that have the same case numbers in both weeks, plus/minus seven cases.
+Includes all countries that have the same case numbers in both weeks, plus/minus two percent of cases (until calendar week 34, this was set to plus/minus 7 cases).
 
 **Less cases this week compared to last week:**
 Includes all countries that have reported at least seven fewer cases this week, compared to the last week.
