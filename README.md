@@ -38,7 +38,7 @@ Includes all countries whose case numbers doubled compared to the last week, as 
 Includes all countries whose numbers of cases in the current week increased by more than seven from to the last week. It also includes countries whose case numbers rose from zero cases in the last week to more than seven cases in the current week.
 
 **Approximately same number of cases in both weeks:**
-Includes all countries that have the same case numbers in both weeks, plus/minus two percent of cases (until calendar week 34, this was set to plus/minus 7 cases).
+Includes all countries that have the same case numbers in both weeks, plus/minus two percent of cases (until calendar week 34, this was set to plus/minus 7 cases). Additionally, if daily reported case numbers are negative for a 14 day interval a country is classified in this category as no change in actual new cases is the best guess in this situation (rather than a decrease). Countries with negative case numbers are additionally checked manually.
 
 **Less cases this week compared to last week:**
 Includes all countries that have reported at least seven fewer cases this week, compared to the last week.
