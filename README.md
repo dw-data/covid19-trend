@@ -1,4 +1,4 @@
-# Covid-19 global trend
+# COVID-19 global trend
 
 Data analysis, visualization, writing: [Gianna-Carina Gruen](https://twitter.com/giannagruen)
 
@@ -6,7 +6,25 @@ You can find the resulting article [here](https://www.dw.com/en/coronavirus-tren
 
 ## Data source
 
-This analysis is based on data by the [European Centre for Disease Prevention and Control (ECDC)](https://www.ecdc.europa.eu/en). They provide daily updated case numbers. The data can be downloaded [here](https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide). Details on how the data is gathered and processed by ECDC can be found on [this page](https://www.ecdc.europa.eu/en/covid-19/data-collection).
+This analysis is based on data by the [**European Centre for Disease Prevention and Control (ECDC)**](https://www.ecdc.europa.eu/en). They provide daily updated case numbers. The data can be downloaded [here](https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide). Details on how the data is gathered and processed by ECDC can be found on [this page](https://www.ecdc.europa.eu/en/covid-19/data-collection).
+
+### *Update*
+
+The ECDC announced to discontinue the publication of daily figures of newly reported cases/deaths from mid December.
+
+To be able to maintain this trend as well as other COVID-19 coverage, we decided to add an additional data source: the [**Johns Hopkins University's Center for Systems Science and Engineering (JHU CSSE)**](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data#daily-reports-csse_covid_19_daily_reports), who publish daily datasets containing the number of accumulated cases/deaths up until the respective date.
+
+To maintain this script as is, we introduced an additional preprocessing step. Scraper script and example data can be found [here](/preprocessing/)
+
+## Preprocessing
+
+The data until November 30th, 2020 are from the ECDC. All datapoints starting December 1st, 2020 are based on JHU CSSE data.
+
+However JHU CSSE data is not taken as is, because it is the all time accumulated number of cases until date x whereas we need the newly reported cases on date x.
+
+So we re-configure the JHU CSSE data in preprocessing: For every country, we load today's data and yesterday's data and substract the latter from the former, with the difference being the number of newly reported cases by country on this date. This is saved as a new dataset.
+
+This new dataset is then added to the base of ECDC data until November 30th and saved as `ecdc_base-plus_update.csv` which gets loaded by a scraper on the next day as a new base, adding the next day's data to it.
 
 
 ## Analysis
