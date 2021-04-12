@@ -56,13 +56,13 @@ Includes all countries whose case numbers doubled compared to the last week, as 
 Includes all countries whose numbers of cases in the current week increased by more than seven from to the last week. It also includes countries whose case numbers rose from zero cases in the last week to more than seven cases in the current week.
 
 **Approximately same number of cases in both weeks:**
-Includes all countries that have the same case numbers in both weeks, plus/minus two percent of cases (until calendar week 34, this was set to plus/minus 7 cases). Additionally, if daily reported case numbers are negative for a 14 day interval a country is classified in this category as no change in actual new cases is the best guess in this situation (rather than a decrease). Countries with negative case numbers are additionally checked manually.
+Includes all countries that have the same case numbers in both weeks, plus/minus two percent of cases. Additionally, if daily reported case numbers are negative for a 14 day interval a country is classified in this category as no change in actual new cases is the best guess in this situation (rather than a decrease). Countries with negative case numbers are additionally checked manually.
 
 **Less cases this week compared to last week:**
-Includes all countries that have reported at least seven fewer cases this week, compared to the last week.
+Includes all countries that have reported at more than 2 percent fewer cases these two weeks, compared to the two weeks before that.
 
 **Less than half the cases compared to last week:**
-Included all countries whose weekly case numbers halfed between the two weeks as well as countries that reported zero cases in the current week, but not in the last week.
+Included all countries whose weekly case numbers halfed between these two weeks as well as countries that reported zero cases in the current two weeks, but not in the two weeks before that.
 
 **Zero cases two week in a row:**
 Includes all countries that reported zero cases for 14 days in a row.
